@@ -5,6 +5,8 @@ import java.util.Objects;
 
 public class Gremlin implements Serializable {
 
+
+    private int id;
     private String name;
     private int age;
     private Color color;
@@ -17,6 +19,15 @@ public class Gremlin implements Serializable {
         this.age = age;
         this.color = color;
         this.isEvil = isEvil;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public Gremlin setId(int id) {
+        this.id = id;
+        return this;
     }
 
     public String getName() {
@@ -60,18 +71,19 @@ public class Gremlin implements Serializable {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Gremlin gremlin = (Gremlin) o;
-        return age == gremlin.age && isEvil == gremlin.isEvil && Objects.equals(name, gremlin.name) && color == gremlin.color;
+        return id == gremlin.id && age == gremlin.age && isEvil == gremlin.isEvil && Objects.equals(name, gremlin.name) && color == gremlin.color;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(name, age, color, isEvil);
+        return Objects.hash(id, name, age, color, isEvil);
     }
 
     @Override
     public String toString() {
         return "Gremlin{" +
-                "name='" + name + '\'' +
+                "id=" + id +
+                ", name='" + name + '\'' +
                 ", age=" + age +
                 ", color=" + color +
                 ", isEvil=" + isEvil +
