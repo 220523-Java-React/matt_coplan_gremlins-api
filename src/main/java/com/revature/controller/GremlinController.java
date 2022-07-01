@@ -1,16 +1,12 @@
 package com.revature.controller;
-
 import com.revature.model.Gremlin;
 import com.revature.service.GremlinService;
 import io.javalin.http.Handler;
 
-import java.util.ArrayList;
-import java.util.List;
-
 
 public class GremlinController {
 
-    private GremlinService gremlinService;
+    GremlinService gremlinService = new GremlinService();
 
     public Handler createNewGremlin = ctx -> {
         Gremlin gremlin = ctx.bodyAsClass(Gremlin.class);

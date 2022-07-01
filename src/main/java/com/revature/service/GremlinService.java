@@ -7,7 +7,7 @@ import java.util.List;
 
 public class GremlinService {
 
-    private GremlinRepository gremlinRepository;
+    GremlinRepository gremlinRepository = new GremlinRepository();
 
     public Gremlin createNewGremlin(Gremlin gremlin) {
         return gremlinRepository.create(gremlin);

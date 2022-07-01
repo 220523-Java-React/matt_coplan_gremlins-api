@@ -13,7 +13,7 @@ public class ConnectionUtility {
     public static Connection instance;
 
     // Create String values for database ( should be in properties file!)
-    static final String url = "jdbc:postgresql://localhost:5432]/postgres?CurrentSchema=public";
+    static final String url = "jdbc:postgresql://localhost:5432/postgres?CurrentSchema=public";
     static final String username = "postgres";
     static final String password = "password";
 
